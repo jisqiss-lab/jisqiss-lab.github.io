@@ -1,10 +1,13 @@
 {
-  "_설명": "모든 앱의 자체 홍보(하우스 광고) 설정. 앱이 켤 때 읽는다. promoRatio = 시작 광고 차례 중 홍보 비율(0이면 끄고 AdMob만, 1이면 항상), promoMaxPerUser = 한 사람에게 보여 줄 최대 횟수. 값만 고치면 앱 업데이트 없이 바뀐다(다음 실행부터).",
-  "version": 1,
+  "_설명": "모든 앱의 자체 홍보(하우스 광고) 설정. 앱이 켤 때 읽고 다음 실행부터 쓴다. promoRatio = 시작 광고 차례 중 홍보 비율(0이면 끄고 AdMob만, 1이면 항상), promoMaxPerUser = 한 사람에게 보여 줄 최대 횟수, promoVideo = 홍보 영상 주소(바꾸면 앱이 새 영상을 받아 둔다). default 는 모든 앱 공통값이고, apps 아래에 적은 값이 있으면 그 앱만 그 값을 쓴다.",
+  "version": 2,
+  "default": {
+    "promoRatio": 0.5,
+    "promoMaxPerUser": 5
+  },
   "apps": {
     "the-tens": {
-      "promoRatio": 0.5,
-      "promoMaxPerUser": 5
+      "promoVideo": "https://jisqiss-lab.github.io/promo/thetens-fruitdrop-5s-hand.mp4"
     },
     "sandwich-rush": {
       "promoRatio": 1,
