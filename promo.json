@@ -1,14 +1,51 @@
 {
-  "_설명": "모든 앱의 자체 홍보(하우스 광고) 설정. 앱이 켤 때 읽고 다음 실행부터 쓴다. promoRatio = 시작 광고 차례 중 홍보 비율(0이면 끄고 AdMob만, 1이면 항상), promoMaxPerUser = 한 사람에게 보여 줄 최대 횟수, promoVideo = 홍보 영상 주소(Cloudflare 저장소 https://jisqiss-promo.fopic.workers.dev/ 만), promoVideoSHA256 = 그 영상 파일의 지문(shasum -a 256 결과). 영상을 바꾸면 지문도 같이 바꿔야 앱이 받는다. default 는 모든 앱 공통값이고, apps 아래에 적은 값이 있으면 그 앱만 그 값을 쓴다.",
-  "version": 2,
+  "_설명": "모든 앱의 자체 홍보(하우스 광고) 설정. 앱이 켤 때 읽고 다음 실행부터 쓴다. default = 모든 앱 공통값(promoRatio 홍보 비율 0~1·0이면 끔, promoMaxPerUser 한 사람 최대 횟수). targets = 홍보하는 앱(appStoreId, urlScheme=이미 깔렸는지 확인용, name/description 언어별, icon). creatives = 광고 소재(target 앱 + video). apps.<앱>.creatives = 그 앱에서 돌릴 소재와 비중. 영상·아이콘은 Cloudflare https://jisqiss-promo.fopic.workers.dev/ 에 올리고 sha256(shasum -a 256)을 같이 적는다 — 지문이 다르면 앱이 안 쓴다. (v2 호환) apps.the-tens.promoVideo/promoVideoSHA256 은 옛 개발 빌드용으로 남겨 둠.",
+  "version": 3,
   "default": {
     "promoRatio": 0.5,
     "promoMaxPerUser": 5
   },
+  "targets": {
+    "glass-fruit-drop": {
+      "appStoreId": "6814437255",
+      "urlScheme": "glassfruitdrop",
+      "name": {
+        "ko": "유리수박",
+        "en": "Glass Fruit Drop",
+        "ja": "Glass Fruit Drop",
+        "zh-Hans": "Glass Fruit Drop",
+        "zh-Hant": "Glass Fruit Drop"
+      },
+      "description": {
+        "ko": "같은 과일끼리 합쳐 더 큰 과일을 만드세요",
+        "en": "Merge matching pieces into bigger fruit",
+        "ja": "同じフルーツ同士を合体させ、もっと大きなフルーツを作りましょう",
+        "zh-Hans": "把相同水果合成为更大的水果",
+        "zh-Hant": "把相同水果合成為更大的水果"
+      },
+      "icon": {
+        "url": "https://jisqiss-promo.fopic.workers.dev/icons/glass-fruit-drop.png",
+        "sha256": "e36e5ef1bdb5be1dca80125a580d71823623a78d2aec37465ca1d4aa86e3f498"
+      }
+    }
+  },
+  "creatives": {
+    "gfd-bumper-5s-hand": {
+      "target": "glass-fruit-drop",
+      "video": {
+        "url": "https://jisqiss-promo.fopic.workers.dev/thetens-fruitdrop-5s-hand.mp4",
+        "sha256": "2cd84c047a71e02f752f2d18765f9b85378399a4cf67ab657737771b3f9aa2bf"
+      }
+    }
+  },
   "apps": {
     "the-tens": {
       "promoVideo": "https://jisqiss-promo.fopic.workers.dev/thetens-fruitdrop-5s-hand.mp4",
-      "promoVideoSHA256": "2cd84c047a71e02f752f2d18765f9b85378399a4cf67ab657737771b3f9aa2bf"
+      "promoVideoSHA256": "2cd84c047a71e02f752f2d18765f9b85378399a4cf67ab657737771b3f9aa2bf",
+      "promoMaxPerUser": 1000000,
+      "creatives": {
+        "gfd-bumper-5s-hand": 1
+      }
     },
     "sandwich-rush": {
       "promoRatio": 0.5,
