@@ -7,7 +7,7 @@
       "promoMaxPerUser": 5
     },
     "sandwich-rush": {
-      "promoRatio": 0.5,
+      "promoRatio": 1,
       "promoMaxPerUser": 5
     }
   }
