@@ -36,6 +36,13 @@
         "url": "https://jisqiss-promo.fopic.workers.dev/thetens-fruitdrop-5s-hand.mp4",
         "sha256": "2cd84c047a71e02f752f2d18765f9b85378399a4cf67ab657737771b3f9aa2bf"
       }
+    },
+    "gfd-standard-15s-hand": {
+      "target": "glass-fruit-drop",
+      "video": {
+        "url": "https://jisqiss-promo.fopic.workers.dev/gfd-standard-15s-hand-720.mp4",
+        "sha256": "9b470d73ef2b741c6808483bc58fd6e7ecd3e5fffe0962985b1b763f77ea6046"
+      }
     }
   },
   "apps": {
@@ -49,7 +56,10 @@
     },
     "sandwich-rush": {
       "promoRatio": 0.5,
-      "promoMaxPerUser": 1000000
+      "promoMaxPerUser": 1000000,
+      "creatives": {
+        "gfd-standard-15s-hand": 1
+      }
     }
   }
 }
