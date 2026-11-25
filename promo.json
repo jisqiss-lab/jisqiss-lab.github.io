@@ -1,5 +1,5 @@
 {
-  "_설명": "모든 앱의 자체 홍보(하우스 광고) 설정. 앱이 켤 때 읽고 다음 실행부터 쓴다. promoRatio = 시작 광고 차례 중 홍보 비율(0이면 끄고 AdMob만, 1이면 항상), promoMaxPerUser = 한 사람에게 보여 줄 최대 횟수, promoVideo = 홍보 영상 주소(우리 사이트 promo/ 폴더만), promoVideoSHA256 = 그 영상 파일의 지문(shasum -a 256 결과). 영상을 바꾸면 지문도 같이 바꿔야 앱이 받는다. default 는 모든 앱 공통값이고, apps 아래에 적은 값이 있으면 그 앱만 그 값을 쓴다.",
+  "_설명": "모든 앱의 자체 홍보(하우스 광고) 설정. 앱이 켤 때 읽고 다음 실행부터 쓴다. promoRatio = 시작 광고 차례 중 홍보 비율(0이면 끄고 AdMob만, 1이면 항상), promoMaxPerUser = 한 사람에게 보여 줄 최대 횟수, promoVideo = 홍보 영상 주소(Cloudflare 저장소 https://jisqiss-promo.fopic.workers.dev/ 만), promoVideoSHA256 = 그 영상 파일의 지문(shasum -a 256 결과). 영상을 바꾸면 지문도 같이 바꿔야 앱이 받는다. default 는 모든 앱 공통값이고, apps 아래에 적은 값이 있으면 그 앱만 그 값을 쓴다.",
   "version": 2,
   "default": {
     "promoRatio": 0.5,
@@ -7,7 +7,7 @@
   },
   "apps": {
     "the-tens": {
-      "promoVideo": "https://jisqiss-lab.github.io/promo/thetens-fruitdrop-5s-hand.mp4",
+      "promoVideo": "https://jisqiss-promo.fopic.workers.dev/thetens-fruitdrop-5s-hand.mp4",
       "promoVideoSHA256": "2cd84c047a71e02f752f2d18765f9b85378399a4cf67ab657737771b3f9aa2bf"
     },
     "sandwich-rush": {
