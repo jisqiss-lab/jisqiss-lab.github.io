@@ -10,7 +10,7 @@
       "promoVideo": "https://jisqiss-lab.github.io/promo/thetens-fruitdrop-5s-hand.mp4"
     },
     "sandwich-rush": {
-      "promoRatio": 1,
+      "promoRatio": 0.5,
       "promoMaxPerUser": 5
     }
   }
