@@ -11,7 +11,7 @@
     },
     "sandwich-rush": {
       "promoRatio": 0.5,
-      "promoMaxPerUser": 5
+      "promoMaxPerUser": 1000000
     }
   }
 }
