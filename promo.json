@@ -1,0 +1,14 @@
+{
+  "_설명": "모든 앱의 자체 홍보(하우스 광고) 설정. 앱이 켤 때 읽는다. promoRatio = 시작 광고 차례 중 홍보 비율(0이면 끄고 AdMob만, 1이면 항상), promoMaxPerUser = 한 사람에게 보여 줄 최대 횟수. 값만 고치면 앱 업데이트 없이 바뀐다(다음 실행부터).",
+  "version": 1,
+  "apps": {
+    "the-tens": {
+      "promoRatio": 0.5,
+      "promoMaxPerUser": 5
+    },
+    "sandwich-rush": {
+      "promoRatio": 0.5,
+      "promoMaxPerUser": 5
+    }
+  }
+}
