@@ -45,7 +45,7 @@
 <ul>
   <li>어떤 앱을 얼마나 자주 보여 줄지 정한 설정 파일을 GitHub Pages(GitHub, Inc.)에서, 광고 영상·아이콘을 Cloudflare(Cloudflare, Inc.)에서 내려받습니다. 이때 각 회사가 통신에 필요한 접속 IP 등 기술 정보를 처리할 수 있습니다. 본 앱은 이 파일을 받을 때 다른 정보를 보내지 않습니다.</li>
   <li>이미 그 앱을 설치한 기기에는 광고를 보여 주지 않기 위해, <strong>기기 안에서</strong> 해당 앱의 설치 여부만 확인합니다. 확인 결과와 기기에 설치된 앱 목록은 어디에도 보내지 않습니다.</li>
-  <li>광고가 보였는지·눌렸는지·닫혔는지(1절의 자체 홍보 측정 기록)를 Google Firebase(Cloud Firestore)에 기록합니다. 개인을 알아볼 수 있는 식별자는 넣지 않으며 다른 정보와 결합하지 않습니다.</li>
+  <li>광고가 보였는지·눌렸는지·닫혔는지(1절의 자체 홍보 측정 기록)를 Google Firebase(Cloud Firestore)에 기록합니다. 기록 자체에는 개인을 알아볼 수 있는 식별자를 넣지 않으며 다른 정보와 결합하지 않습니다. 다만 기록은 앱의 익명 로그인 상태로 전송되므로, 전송 과정에서 Google이 요청 처리를 위해 익명 계정 정보를 기술적으로 처리할 수 있습니다(기록에는 저장되지 않음).</li>
   <li>이 기능은 다른 회사의 앱·웹사이트 정보와 결합해 이용자를 추적하지 않습니다.</li>
 </ul>
 
@@ -76,7 +76,7 @@
 
 <h2>7. 보관 및 삭제</h2>
 <p>랭킹 데이터는 서비스가 운영되는 동안 보관됩니다. 본인의 닉네임·점수 데이터 삭제를 원하시면 아래 이메일로 요청해 주세요. 요청 시 해당 익명 계정의 데이터를 삭제합니다.</p>
-<p>자체 홍보 측정 기록은 수집 후 13개월이 지나면 삭제합니다. 식별자가 없어 특정 이용자의 기록만 골라 삭제할 수는 없습니다.</p>
+<p>자체 홍보 측정 기록은 수집 후 13개월이 지나면 삭제합니다. 기록에 식별자를 저장하지 않으므로 특정 이용자의 기록만 골라 삭제할 수는 없습니다.</p>
 
 <h2>8. 아동의 개인정보</h2>
 <p>본 앱은 만 14세 미만 아동을 대상으로 의도적으로 개인정보를 수집하지 않습니다. 닉네임 외에 개인을 식별할 수 있는 정보를 요구하지 않습니다.</p>
@@ -112,7 +112,7 @@
 <ul>
   <li>The App downloads a settings file from GitHub Pages (GitHub, Inc.) and ad videos and icons from Cloudflare (Cloudflare, Inc.). These companies may process technical information such as IP addresses to deliver the files. The App sends no other information when downloading them.</li>
   <li>To avoid showing an ad for an app you already have, the App checks <strong>on your device</strong> whether that app is installed. The result and your list of apps are never sent anywhere.</li>
-  <li>Views, taps, and closes (the house-ad measurement records above) are recorded in Google Firebase (Cloud Firestore) without identifiers and are not combined with other information.</li>
+  <li>Views, taps, and closes (the house-ad measurement records above) are recorded in Google Firebase (Cloud Firestore). The records themselves contain no identifiers and are not combined with other information. Because they are sent while the App is signed in anonymously, Google may technically process the anonymous account information to handle the request; it is not stored in the records.</li>
   <li>This feature does not track you across other companies' apps or websites.</li>
 </ul>
 
@@ -142,7 +142,7 @@
 
 <h2>7. Retention and Deletion</h2>
 <p>Leaderboard data is retained while the service operates. To delete your nickname and score data, contact us at the email below; we will delete the data associated with your anonymous account.</p>
-<p>House-ad measurement records are deleted 13 months after collection. Because they contain no identifier, records of a specific user cannot be singled out.</p>
+<p>House-ad measurement records are deleted 13 months after collection. Because no identifier is stored in the records, records of a specific user cannot be singled out.</p>
 
 <h2>8. Children's Privacy</h2>
 <p>The App does not knowingly collect personal information from children under 13. No personally identifying information beyond a nickname is requested.</p>
